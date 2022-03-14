@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+<body style="background-color:#FFB6C1;">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<!DOCTYPE html>
+<title>Example</title>
+
+<!-- Styles -->	
+<style>
+.example1 {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+}
+.example1 h3 {
+ font-size: 3em;
+ color: red;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);	
+ transform:translateX(100%);
+ /* Apply animation to this element */	
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Firefox bug fix */
+ -webkit-transform: translateX(100%); /* Firefox bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%); /* Firefox bug fix */
+ transform: translateX(-100%); 
+ }
+}
+</style>
+
+<!-- HTML -->	
+<div class="example1">
+<h3>Hola Fran :) </h3>
+</div>
+<body>
+<script type="text/javascript">
+
+today = new Date();
+
+BigDay = new Date("March 28, 2022");
+
+msPerDay = 24 * 60 * 60 * 1000 ;
+
+timeLeft = (BigDay.getTime() - today.getTime());
+
+e_daysLeft = timeLeft / msPerDay;
+
+daysLeft = Math.floor(e_daysLeft);
+
+e_hrsLeft = (e_daysLeft - daysLeft)*24;
+
+hrsLeft = Math.floor(e_hrsLeft);
+
+minsLeft = Math.floor((e_hrsLeft - hrsLeft)*60);
+
+document.write("En este momento faltan<BR> <H4>" + daysLeft + " días " + hrsLeft +" horas y " + minsLeft + " minutos para </H4> Lisboaaaa<P>");
+
+</script>
+  <marquee behavior="alternate" scrollamount="30">siiiiiii</marquee>
+  
+</html>
